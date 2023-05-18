@@ -3,6 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthModuleModule } from './auth-module/auth-module.module';
+import { TableModuleModule } from './table-module/table-module.module';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './Services/user.service';
+//import ('./table-module/table-module.module').then(m => m.TableModuleModule)
+//import ('./auth-module/auth-module.module').then(m => m.AuthModuleModule)
+
 
 @NgModule({
   declarations: [
@@ -10,9 +17,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModuleModule,
+    TableModuleModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

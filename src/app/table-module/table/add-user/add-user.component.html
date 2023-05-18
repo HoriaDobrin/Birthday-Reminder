@@ -1,0 +1,29 @@
+<h2>Add User</h2>
+<div>
+  <label>First Name:</label>
+  <input type="text" [(ngModel)]="newUser.first_name" placeholder="First Name">
+</div>
+<div>
+  <label>Last Name:</label>
+  <input type="text" [(ngModel)]="newUser.last_name" placeholder="Last Name">
+</div>
+<div>
+  <label>City:</label>
+  <input type="text" [(ngModel)]="newUser.oras" placeholder="City">
+</div>
+<div>
+  <label>Email:</label>
+  <input type="text" [(ngModel)]="newUser.email" placeholder="Email">
+</div>
+<div>
+  <label>Phone:</label>
+  <input type="text" [(ngModel)]="newUser.telefon" placeholder="Phone">
+</div>
+<div>
+    <label>Date of Birth:</label>
+    <input type="text" [(ngModel)]="newUser.dateOfBirth" placeholder="Date of Birth">
+  </div>
+<div class="buttons">
+  <button (click)="add()">Add</button>
+  <button (click)="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,38 @@
+<nz-table #basicTable [nzData]="users">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Telefon</th>
+            <th>City</th>
+            <th>Data Of Birth</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of basicTable.data">
+            <td>{{user.email}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.telefon}}</td>
+            <td>{{user.oras}}</td>
+            <td>{{user.dateOfBirth}}</td>
+            <td>
+              <button class ="updateUser" (click)="onUpdateUser(user)">Update</button>
+            </td>
+            <td>
+              <button class="deleteButton" (click)="onDeleteUser(user)">Delete</button>
+            </td>
+            <td>
+              <button class="detailsButton" (click)="openUser(user)">Details</button>
+            </td>
+            
+          </tr>
+        </tbody>
+    </nz-table>
+
+<button class="addButton" (click)="addUser()">Add User</button>
+ 
